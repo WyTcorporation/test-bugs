@@ -2,20 +2,20 @@
 
 namespace App\Helpers;
 
-use App\Enums\Emails;
+
 
 class NotificationHelper
 {
-    public static function getResellerEmailFrom(int $resellerId): Emails
+    public static function getResellerEmailFrom(int $resellerId): string
     {
-        return Emails::RESELLER;
+        return 'reseller@example.com';
     }
 
     public static function getEmailsByPermit(int $resellerId, string $event): array
     {
         return [
-            Emails::EMPLOYEE1,
-            Emails::EMPLOYEE2
+            'employee1@example.com',
+            'employee2@example.com'
         ];
     }
 }
